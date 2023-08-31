@@ -22,12 +22,10 @@ public class ConditionEx {
         if (age2 >= 8 && age2 <= 13) {
                 System.out.println("초등학교"); // 8 ~ 13
         }
-        else
-        if (age2 <= 16) {
+        else if(age2 <= 16) {
             System.out.println("중학교"); // 14 ~ 16
         }
-        else
-        if (age2 <= 19) {
+        else {
             System.out.println("고등학교"); // 17 ~ 19
         }
 

@@ -85,7 +85,7 @@ public class Operator {
 
         // 곱연산(and) - &&
         // 모두 참이면 참, 그외 거짓
-                System.out.println(true && false);
+        System.out.println(true && false);
         System.out.println(false && false);
         System.out.println(false && true);
         System.out.println(true && true);
