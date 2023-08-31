@@ -43,5 +43,45 @@ public class Operator {
         boolean d = true;
         boolean e = false;
 
+
+        // 증감연산자
+        System.out.println("======= 증감연산자 =======");
+        int num = 10;
+        System.out.println(num + 10);
+
+        // num은 몇인가? 20 -> 틀림, 변수는 대입하지 않으면 안바뀜
+        System.out.println(num);
+
+        // num의 값을 10 증가
+//        num = num + 10;
+        num += 10;
+        System.out.println(num);
+
+        // num의 값을 5 감소
+//        num = num - 5;
+        num -= 5;
+        System.out.println(num); // 15
+
+        // num의 값을 2배 증가
+        num *= 2;
+        System.out.println(num);
+
+        num /= 2;
+        // num의 값을 절반으로 감소
+        System.out.println(num); // 15
+
+        // 1증가 -> 많이 쓰임
+//        num = num + 1;
+        num += 1;
+        num++;
+
+        // 1감소
+        num = num - 1;
+        num -= 1;
+        num--;
+
+        // 논리 연산
+
+
     }
 }
