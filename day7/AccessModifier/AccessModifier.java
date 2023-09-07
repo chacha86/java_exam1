@@ -26,18 +26,19 @@ public class AccessModifier {
 //        c1.num1 = 200; // 대입 X
 //        c1.num2 = 0;
 
+        // setter 메서드를 이용해서 우회 접근해야 한다.
         c1.setNum1(100);
         c1.setNum2(200);
 
-        c1.setNum1(200); // setter
-        c1.setNum2(0); // setter
+        c1.setNum1(200);
+        c1.setNum2(0); // 메서드를 이용해 우회 접근하면 코드를 이용해 잘못된 데이터의 유입을 막을 수 있다.
 
-        System.out.println(c1.getNum1()); // getter
+        System.out.println(c1.getNum1());
         System.out.println(c1.devide());
         System.out.println(c1.plus());
 
 
-
+        // Calculator2는 다른 폴더에 존재하고 Calculator2의 plus() 메서드는 접근제어자가 default이기 때문에 여기서 사용 불가능
 //        Calculator2 c2 = new Calculator2();
 //        c2.plus();
     }
@@ -45,7 +46,7 @@ public class AccessModifier {
 
 class Caculator {
 
-    // 그냥 웬만하면 객체 변수는 private
+    // 웬만하면 객체 변수는 private 지정한다.
     private int num1 = 10;
     private int num2 = 20;
 
@@ -54,11 +55,11 @@ class Caculator {
     // getter -> 변수의 값을 가져감
     // setter, getter 이름 짓는법
     // set+변수명, get+변수명, 단 변수명 시작 알파벳은 대문자
-    public void setNum1(int num) {
+    public void setNum1(int num) { // num1 변수에 대한 setter
         this.num1 = num;
     }
 
-    public void setNum2(int num) {
+    public void setNum2(int num) { // num2 변수에 대한 setter
         if(num == 0) {
             System.out.println("0은 안됩니다.");
             return;
@@ -66,8 +67,12 @@ class Caculator {
         this.num2 = num;
     }
 
-    public int getNum1() {
+    public int getNum1() { // num1 변수에 대한 getter
         return this.num1;
+    }
+
+    public int getNum2() { // num2 변수에 대한 getter
+        return this.num2;
     }
 
     public int plus() {
